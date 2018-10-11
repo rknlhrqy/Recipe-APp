@@ -37,4 +37,8 @@ export class SigninComponent implements OnInit {
       console.log(error);
     }
   }
+
+  getSavedToken() {
+    return this.authService.getSavedToken();
+  }
 }

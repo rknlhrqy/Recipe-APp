@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ShoppingListService } from '../shared/shopping-list.service';
-import { DataStorageService } from '../shared/data-storage.service';
-import { RecipeService } from '../shared/recipe.service';
-import { AuthService } from '../shared/auth.service';
-import { Recipe } from '../shared/recipe.model';
+import { ShoppingListService } from '../../shared/shopping-list.service';
+import { DataStorageService } from '../../shared/data-storage.service';
+import { RecipeService } from '../../shared/recipe.service';
+import { AuthService } from '../../shared/auth.service';
+import { Recipe } from '../../shared/recipe.model';
 
 @Component({
   selector: 'app-header',
@@ -57,5 +57,9 @@ export class HeaderComponent implements OnInit {
 
   onLogout() {
     this.authService.logout();
+  }
+
+  isAuthenticated() {
+    return this.authService.isAuthenticated();
   }
 }
